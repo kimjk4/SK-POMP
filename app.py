@@ -261,8 +261,6 @@ with header_container:
     
     st.caption('Choose model from Select Activity below')
     st.caption('*Please find further details in About SK-POMP and About SK-PNMS from Select Activity below.')
-    st.caption('**These models are currently in development. Further external validation is required before wide use in clinical decision making. Please use at your own risk.')
-
        
 if __name__ == '__main__':
     main()
