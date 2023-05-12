@@ -151,24 +151,24 @@ with stats_container:
 
                    with col_6:
 
-                       feature_list = [get_value(gender, Gender_dict), get_value(prenatal_hn, feature_dict), get_value(laterality, Laterality_dict), length_1_1, 
+                       feature_list1 = [get_value(gender, Gender_dict), get_value(prenatal_hn, feature_dict), get_value(laterality, Laterality_dict), length_1_1, 
                                        apd_us1, sfu_us1, max_dilation1]
-                       single_sample = np.array(feature_list).reshape(1,-1)
+                       single_sample1 = np.array(feature_list).reshape(1,-1)
 
                        model_choice = st.selectbox("Select Model", ["Calibrated logistic regression"])
                        if st.button("Predict"):    
                            if model_choice == "Calibrated logistic regression":
-                               loaded_model = load_model("calibratedlogmodel_surgery.pkl")
-                               prediction = loaded_model.predict(single_sample)
-                               proba = loaded_model.predict_proba(single_sample)
+                               loaded_model1 = load_model("calibratedlogmodel_surgery.pkl")
+                               prediction1 = loaded_model.predict(single_sample1)
+                               proba1 = loaded_model.predict_proba(single_sample1)
 
-                           if prediction == 1:
+                           if prediction1 == 1:
                                st.success("The patient is likely to require surgical intervention.")
                            else:
                                st.success("The patient is unlikely to require surgical intervention.")
 
-                           st.write("Prediction: ", prediction)
-                           st.write("Probability of requiring surgical intervention: ", proba)
+                           st.write("Prediction: ", prediction1)
+                           st.write("Probability of requiring surgical intervention: ", proba1)
                            st.caption("Our decision curve analysis suggests patients with 15-75 percent likelihood of surgery are likely to benefit from this model.")
                            st.image('decision_curve_surgery.png')
 
