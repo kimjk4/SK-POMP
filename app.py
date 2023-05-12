@@ -81,8 +81,7 @@ with stats_container:
     def main():
         
         with subheader_container:
-               activity = st.selectbox ('Choose between models', ['SK-POMP: Prediction for obstruction', 'SK-PNMS: Prediction for surgical intervention'])
-               activity1 = st.selectbox ('Model details', ['About SK-POMP', 'About SK-PNMS'])
+               activity = st.selectbox ('Choose between models', ['SK-POMP: Prediction for obstruction', 'SK-PNMS: Prediction for surgical intervention', 'About SK-POMP', 'About SK-PNMS'])
                if activity == 'SK-POMP: Prediction for obstruction':
 
                    with about_container0: 
@@ -173,7 +172,7 @@ with stats_container:
                            st.caption("Our decision curve analysis suggests patients with 10-75 percent likelihood of surgery are likely to benefit from this model.")
                            st.image('decision_curve_surgery.png')
 
-               if activity1 == 'About SK-POMP':
+               if activity == 'About SK-POMP':
 
                           with about_container1:
                               st.subheader ('SK-POMP is a prediction of primary obstructive megaureter for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
@@ -213,7 +212,7 @@ with stats_container:
                                   st.caption('Kim JK, Chua ME, Khondker A, ... Richter J, Lorenzo AJ, Rickard M')
                                   st.caption('Pending peer-reviewed publication')
 
-               if activity1 == 'About SK-PNMS':
+               if activity == 'About SK-PNMS':
 
                           with about_container6:
                               st.subheader ('SK-PNMS is a prediction of surgical intervention in for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
