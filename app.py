@@ -74,8 +74,8 @@ col_21, col_22 = st.columns(2)
 
 with header_container:
     st.title('SK-POMP & SK-PNMS')
-    st.write("SK-POMP (SickKids Primary Obstructive Megaureter Prediction) is a web app to predict the likelihood of identfying obstruction on MAG3 scan (defined as t1/2 > 20 minutes) based on an infant's baseline clinical and ultrasound characteristics.")
-    st.write("SK-PNMS (SickKids Prediction for Non-refluxing Megaureter Surgical interention) This is a web app to predict the likelihood of requiring surgery based on an infant's baseline clinical and ultrasound characteristics. The need for surgery was determined based on: presence of obstruction, decreased differential function <40%, decreasing differential renal function >5%, pain or recurrent UTIs, or worsening hydroureteronephrosis on follow-up imaging.")
+    st.caption("SK-POMP (SickKids Primary Obstructive Megaureter Prediction) is a web app to predict the likelihood of identfying obstruction on MAG3 scan (defined as t1/2 > 20 minutes) based on an infant's baseline clinical and ultrasound characteristics.")
+    st.caption("SK-PNMS (SickKids Prediction for Non-refluxing Megaureter Surgical interention) This is a web app to predict the likelihood of requiring surgery based on an infant's baseline clinical and ultrasound characteristics. The need for surgery was determined based on: presence of obstruction, decreased differential function <40%, decreasing differential renal function >5%, pain or recurrent UTIs, or worsening hydroureteronephrosis on follow-up imaging.")
     st.caption('These models are currently in development. Further external validation is required before wide use in clinical decision making. Please use at your own risk.')
 
 with stats_container:
@@ -169,7 +169,7 @@ with stats_container:
         if activity == 'About SK-POMP':
             
                    with about_container1:
-                       st.subheader ('This is a prediction of primary obstructive megaureter for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
+                       st.subheader ('SK-POMP is a prediction of primary obstructive megaureter for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
                        st.write ('The tool is based on 183 infants identified to have primary non-refluxing megaureter.')
                        st.caption('Among infants identified to have hydronephrosis, those with primary non-refluxing megaureter accounts for the minority. Without a mercaptoacetyltriglycine-3 (MAG-3) diuretic renal scan, it is difficult to discern whether the cause of the megaureter is due to obstruction. Hence, we aim to develop a prediction model, specifically for the megaureter population, to predict the likelihood of detecting obstruction on MAG-3 scan based on clinical and ultrasound characteristics.')
 
@@ -209,7 +209,7 @@ with stats_container:
         if activity == 'About SK-PNMS':
             
                    with about_container6:
-                       st.subheader ('This is a prediction of surgical intervention in for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
+                       st.subheader ('SK-PNMS is a prediction of surgical intervention in for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
                        st.write ('The tool is based on 183 infants identified to have primary non-refluxing megaureter.')
                        st.caption('Among infants identified to have hydronephrosis, those with primary non-refluxing megaureter accounts for the minority. Patients with obstruction or worsening clinical or imagine features, as well as decreasing renal function, are candidates for surgical intervention. This model aims to identify patients at high risk of requiring surgical intervention at presentation, using clinical and ultrasound features.')
 
