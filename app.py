@@ -258,6 +258,83 @@ with header_container:
        st.write("SK-POMP (SickKids Primary Obstructive Megaureter Prediction) is a web app to predict the likelihood of identfying obstruction on MAG3 scan (defined as t1/2 > 20 minutes) based on an infant's baseline clinical and ultrasound characteristics.")
     with st.expander('SK-PNMS?'):
        st.write("SK-PNMS (SickKids Prediction for Non-refluxing Megaureter Surgical interention) This is a web app to predict the likelihood of requiring surgery based on an infant's baseline clinical and ultrasound characteristics. The need for surgery was determined based on: presence of obstruction, decreased differential function <40%, decreasing differential renal function >5%, pain or recurrent UTIs, or worsening hydroureteronephrosis on follow-up imaging.")
+       with about_container1:
+                              st.subheader ('SK-POMP is a prediction of primary obstructive megaureter for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
+                              st.write ('The tool is based on 183 infants identified to have primary non-refluxing megaureter.')
+                              st.caption('Among infants identified to have hydronephrosis, those with primary non-refluxing megaureter accounts for the minority. Without a mercaptoacetyltriglycine-3 (MAG-3) diuretic renal scan, it is difficult to discern whether the cause of the megaureter is due to obstruction. Hence, we aim to develop a prediction model, specifically for the megaureter population, to predict the likelihood of detecting obstruction on MAG-3 scan based on clinical and ultrasound characteristics.')
+
+                          with about_container2:
+                              with col_7:
+                                  st.write('Using plot densities of the variables, we identified variables that had potential to differentiate patients who are likely to have obstruction')
+                              with col_8:
+                                  st.image('SFU.png')
+                                  st.caption('Example plot of SFU grading demonstrating potential to differentiate patients who are likely to have obstruction.')
+
+                          with about_container3:
+                              with col_9:
+                                  st.write('Following this, we developed a logistic regression model with L2 regularization and was able to calibrate it to provide better prediction.')
+                              with col_10:
+                                  st.image('calibration.png')
+                                  st.caption('Calibration curve of the pre- and post-calibration logistic regression model.')
+
+                          with about_container4:
+                              with col_11:
+                                  st.write('The final model had a area under receiving operating characteristics curve (AUROC) of 0.817 and area under precision-recall curve (AUPRC) of 0.736. The f1 score was 0.700.')
+                                  st.write('The tool was last updated on May 10, 2023 and may be updated with new data as they become available.')
+                                  st.caption('For questions regarding model hyperparameters and training, please contact Jin Kyu (Justin) Kim at: jjk.kim@mail.utoronto.ca')
+                              with col_12:
+                                  st.image('ROC.png')
+                                  st.image('PRC.png')
+                                  st.image('CM.png')
+                                  st.caption('Final model evaluation using ROC, PRC, and confusion matrix.')
+
+                          with about_container5:
+                              with col_13:
+                                  st.subheader ('Reference')
+                              with col_14:
+                                  st.write('Predicting the likelihood of obstruction for non-refluxing primary megaureter using a calibrated ridge regression model: SK-POMP (SickKids-Primary Obstructive Megaureter Prediction)')
+                                  st.caption('Kim JK, Chua ME, Khondker A, ... Richter J, Lorenzo AJ, Rickard M')
+                                  st.caption('Pending peer-reviewed publication')
+
+               if activity == 'About SK-PNMS':
+
+                          with about_container6:
+                              st.subheader ('SK-PNMS is a prediction of surgical intervention in for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
+                              st.write ('The tool is based on 183 infants identified to have primary non-refluxing megaureter.')
+                              st.caption('Among infants identified to have hydronephrosis, those with primary non-refluxing megaureter accounts for the minority. Patients with obstruction or worsening clinical or imagine features, as well as decreasing renal function, are candidates for surgical intervention. This model aims to identify patients at high risk of requiring surgical intervention at presentation, using clinical and ultrasound features.')
+
+                          with about_container7:
+                              with col_15:
+                                  st.write('Using plot densities of the variables, we identified variables that had potential to differentiate patients who are likely to require surgical intervention')
+                              with col_16:
+                                  st.image('SFU_surgery.png')
+                                  st.caption('Example plot of SFU grading demonstrating potential to differentiate patients who are likely to require surgical intervention.')
+
+                          with about_container8:
+                              with col_17:
+                                  st.write('Following this, we developed a logistic regression model with L2 regularization and was able to calibrate it to provide better prediction.')
+                              with col_18:
+                                  st.image('calibration_surgery.png')
+                                  st.caption('Calibration curve of the pre- and post-calibration logistic regression model.')
+
+                          with about_container9:
+                              with col_19:
+                                  st.write('The final model had a area under receiving operating characteristics curve (AUROC) of 0.815 and area under precision-recall curve (AUPRC) of 0.832. The f1 score was 0.750.')
+                                  st.write('The tool was last updated on May 10, 2023 and may be updated with new data as they become available.')
+                                  st.caption('For questions regarding model hyperparameters and training, please contact Jin Kyu (Justin) Kim at: jjk.kim@mail.utoronto.ca')
+                              with col_20:
+                                  st.image('ROC_surgery.png')
+                                  st.image('PRC_surgery.png')
+                                  st.image('CM_surgery.png')
+                                  st.caption('Final model evaluation using ROC, PRC, and confusion matrix.')
+
+                          with about_container10:
+                              with col_21:
+                                  st.subheader ('Reference')
+                              with col_22:
+                                  st.write('Predicting the likelihood of surgery for non-refluxing primary megaureter using a calibrated ridge regression model: SK-POMP (SickKids-Primary Obstructive Megaureter Prediction for Surgery)')
+                                  st.caption('Kim JK, Chua ME, Khondker A, ... Richter J, Lorenzo AJ, Rickard M')
+                                  st.caption('Pending peer-reviewed publication')
     st.caption('*Please find further details in About SK-POMP and About SK-PNMS from Select Activity below.')
     st.caption('**These models are currently in development. Further external validation is required before wide use in clinical decision making. Please use at your own risk.')
 
