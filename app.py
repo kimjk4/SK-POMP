@@ -153,7 +153,7 @@ with stats_container:
 
                        feature_list1 = [get_value(gender, Gender_dict), get_value(prenatal_hn, feature_dict), get_value(laterality, Laterality_dict), length_1_1, 
                                        apd_us1, sfu_us1, max_dilation1]
-                       single_sample1 = np.array(feature_list).reshape(1,-1)
+                       single_sample1 = np.array(feature_list1).reshape(1,-1)
 
                        model_choice = st.selectbox("Select Model", ["Calibrated logistic regression"])
                        if st.button("Predict"):    
