@@ -175,7 +175,6 @@ with stats_container:
 
                    with about_container2:
                        with col_7:
-
                            st.write('Using plot densities of the variables, we identified variables that had potential to differentiate patients who are likely to have obstruction')
                        with col_8:
                            st.image('SFU.png')
@@ -216,7 +215,6 @@ with stats_container:
 
                    with about_container7:
                        with col_15:
-
                            st.write('Using plot densities of the variables, we identified variables that had potential to differentiate patients who are likely to require surgical intervention')
                        with col_16:
                            st.image('SFU_surgery.png')
