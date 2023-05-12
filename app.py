@@ -166,7 +166,7 @@ with stats_container:
                     st.caption("Our decision curve analysis suggests patients with 10-75 percent likelihood of surgery are likely to benefit from this model.")
                     st.image('decision_curve_surgery.png')
 
-            if activity == 'About SK-POMP':
+        if activity == 'About SK-POMP':
             
                    with about_container1:
                        st.subheader ('This is a prediction of primary obstructive megaureter for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
@@ -206,7 +206,7 @@ with stats_container:
                            st.caption('Kim JK, Chua ME, Khondker A, ... Richter J, Lorenzo AJ, Rickard M')
                            st.caption('Pending peer-reviewed publication')
 
-            if activity == 'About SK-PNMS':
+        if activity == 'About SK-PNMS':
             
                    with about_container6:
                        st.subheader ('This is a prediction of surgical intervention in for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
