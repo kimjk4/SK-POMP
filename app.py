@@ -81,7 +81,8 @@ with stats_container:
     def main():
         
         with subheader_container:
-               activity = st.selectbox ('Select Activity', ['SK-POMP: Prediction for obstruction', 'SK-PNMS: Prediction for surgical intervention', 'About SK-POMP', 'About SK-PNMS'])
+               activity = st.selectbox ('Choose between models', ['SK-POMP: Prediction for obstruction', 'SK-PNMS: Prediction for surgical intervention'])
+               activity1 = st.selectbox ('Model details', ['About SK-POMP', 'About SK-PNMS'])
                if activity == 'SK-POMP: Prediction for obstruction':
 
                    with about_container0: 
@@ -172,7 +173,7 @@ with stats_container:
                            st.caption("Our decision curve analysis suggests patients with 10-75 percent likelihood of surgery are likely to benefit from this model.")
                            st.image('decision_curve_surgery.png')
 
-               if activity == 'About SK-POMP':
+               if activity1 == 'About SK-POMP':
 
                           with about_container1:
                               st.subheader ('SK-POMP is a prediction of primary obstructive megaureter for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
@@ -212,7 +213,7 @@ with stats_container:
                                   st.caption('Kim JK, Chua ME, Khondker A, ... Richter J, Lorenzo AJ, Rickard M')
                                   st.caption('Pending peer-reviewed publication')
 
-               if activity == 'About SK-PNMS':
+               if activity1 == 'About SK-PNMS':
 
                           with about_container6:
                               st.subheader ('SK-PNMS is a prediction of surgical intervention in for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
@@ -258,7 +259,7 @@ with header_container:
        st.write("SK-POMP (SickKids Primary Obstructive Megaureter Prediction) is a web app to predict the likelihood of identfying obstruction on MAG3 scan (defined as t1/2 > 20 minutes) based on an infant's baseline clinical and ultrasound characteristics.")
     with st.expander('SK-PNMS?'):
        st.write("SK-PNMS (SickKids Prediction for Non-refluxing Megaureter Surgical interention) This is a web app to predict the likelihood of requiring surgery based on an infant's baseline clinical and ultrasound characteristics. The need for surgery was determined based on: presence of obstruction, decreased differential function <40%, decreasing differential renal function >5%, pain or recurrent UTIs, or worsening hydroureteronephrosis on follow-up imaging.")
-    st.caption('*Please find further details in About SK-POMP and About SK-PNMS tabs in the drop down menu at the bottom of the page.')
+    st.caption('*Please find further details in About SK-POMP and About SK-PNMS from Select Activity below.')
     st.caption('**These models are currently in development. Further external validation is required before wide use in clinical decision making. Please use at your own risk.')
 
        
