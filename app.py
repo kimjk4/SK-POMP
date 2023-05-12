@@ -155,9 +155,9 @@ with stats_container:
                                        apd_us1, sfu_us1, max_dilation1]
                        single_sample1 = np.array(feature_list1).reshape(1,-1)
 
-                       model_choice = st.selectbox("Select Model", ["Calibrated logistic regression"])
+                       model_choice1 = st.selectbox("Select Model", ["Calibrated logistic regression"])
                        if st.button("Predict"):    
-                           if model_choice == "Calibrated logistic regression":
+                           if model_choice1 == "Calibrated logistic regression":
                                loaded_model1 = load_model("calibratedlogmodel_surgery.pkl")
                                prediction1 = loaded_model1.predict(single_sample1)
                                proba1 = loaded_model1.predict_proba(single_sample1)
