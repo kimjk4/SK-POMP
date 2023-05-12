@@ -81,7 +81,7 @@ with stats_container:
     def main():
         
         with subheader_container:
-               activity = st.selectbox ('Choose between models', ['SK-POMP: Prediction for obstruction', 'SK-PNMS: Prediction for surgical intervention', 'About SK-POMP', 'About SK-PNMS'])
+               activity = st.selectbox ('Select Activity', ['SK-POMP: Prediction for obstruction', 'SK-PNMS: Prediction for surgical intervention', 'About SK-POMP', 'About SK-PNMS'])
                if activity == 'SK-POMP: Prediction for obstruction':
 
                    with about_container0: 
