@@ -158,9 +158,9 @@ with stats_container:
                        model_choice = st.selectbox("Select Model", ["Calibrated logistic regression"])
                        if st.button("Predict"):    
                            if model_choice == "Calibrated logistic regression":
-                               loaded_model1 = load_model("calibratedlogmodel_surgery.pkl")
-                               prediction1 = loaded_model.predict(single_sample1)
-                               proba1 = loaded_model.predict_proba(single_sample1)
+                               loaded_model1 = load_model1("calibratedlogmodel_surgery.pkl")
+                               prediction1 = loaded_model1.predict(single_sample1)
+                               proba1 = loaded_model1.predict_proba(single_sample1)
 
                            if prediction1 == 1:
                                st.success("The patient is likely to require surgical intervention.")
