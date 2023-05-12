@@ -169,7 +169,7 @@ with stats_container:
 
                            st.write("Prediction: ", prediction)
                            st.write("Probability of requiring surgical intervention: ", proba)
-                           st.caption("Our decision curve analysis suggests patients with 10-75 percent likelihood of surgery are likely to benefit from this model.")
+                           st.caption("Our decision curve analysis suggests patients with 15-75 percent likelihood of surgery are likely to benefit from this model.")
                            st.image('decision_curve_surgery.png')
 
                if activity == 'About SK-POMP':
