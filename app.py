@@ -110,9 +110,9 @@ with stats_container:
                                        apd_us1, sfu_us1, max_dilation1]
                        single_sample = np.array(feature_list).reshape(1,-1)
 
-                       model_choice = st.selectbox("Select Model", ["Calibrated logistic regression"])
+                       model_choice = st.selectbox("Select Model", ["SK-POMP"])
                        if st.button("Predict"):    
-                           if model_choice == "Calibrated logistic regression":
+                           if model_choice == "SK-POMP":
                                loaded_model = load_model("calibratedlogmodel.pkl")
                                prediction = loaded_model.predict(single_sample)
                                proba = loaded_model.predict_proba(single_sample)
@@ -155,9 +155,9 @@ with stats_container:
                                        apd_us1, sfu_us1, max_dilation1]
                        single_sample1 = np.array(feature_list1).reshape(1,-1)
 
-                       model_choice1 = st.selectbox("Select Model", ["Calibrated logistic regression"])
+                       model_choice1 = st.selectbox("Select Model", ["SK-PNMS"])
                        if st.button("Predict"):    
-                           if model_choice1 == "Calibrated logistic regression":
+                           if model_choice1 == "SK-PNMS":
                                loaded_model1 = load_model("calibratedlogmodel_surgery.pkl")
                                prediction1 = loaded_model1.predict(single_sample1)
                                proba1 = loaded_model1.predict_proba(single_sample1)
