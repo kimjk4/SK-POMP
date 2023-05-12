@@ -82,7 +82,7 @@ with stats_container:
     def main():
         
         activity = st.selectbox ('Select Activity', ['SK-POMP: Prediction for obstruction', 'SK-PNMS: Prediction for surgical intervention', 'About SK-POMP', 'About SK-PNMS'])
-        if activity == 'Prediction for obstruction':
+        if activity == 'SK-POMP: Prediction for obstruction':
             
             with col_1:
             
@@ -124,7 +124,7 @@ with stats_container:
                     st.caption("Our decision curve analysis suggests patients with 10-65 percent likelihood of obstruction are likely to benefit from this model.")
                     st.image('decision_curve_obstruction.png')
 
-        if activity == 'Prediction for surgical intervention':
+        if activity == 'SK-PNMS: Prediction for surgical intervention':
 
             with col_4:
             
