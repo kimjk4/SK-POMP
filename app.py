@@ -61,7 +61,7 @@ about_container9 = st.container()
 about_container10 = st.container()
 
 about_container0 = st.container()
-about_container00 = st.container
+about_container00 = st.container()
 
 col_1, col_2, col_3 = st.columns(3)
 
