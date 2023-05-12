@@ -207,7 +207,7 @@ with stats_container:
                            st.caption('Kim JK, Chua ME, Khondker A, ... Richter J, Lorenzo AJ, Rickard M')
                            st.caption('Pending peer-reviewed publication')
 
-            if activity == 'About SK-POMPS':
+            if activity == 'About SK-PNMS':
             
                    with about_container6:
                        st.subheader ('This is a prediction of surgical intervention in for patients with hydroureter, developed at The Hospital for Sick Children (SickKids), Toronto, Ontario, Canada.')
