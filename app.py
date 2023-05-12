@@ -44,8 +44,9 @@ def load_model(model_file):
     loaded_model = joblib.load(open(os.path.join(model_file), "rb"))
     return loaded_model
 
-header_container = st.container()
 stats_container = st.container()	
+header_container = st.container()
+
 
 about_container1 = st.container()
 about_container2 = st.container()	
